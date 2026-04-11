@@ -25,6 +25,27 @@
     margin-top: 0;
   }
 
+  /* Navigation Bar Styling */
+  nav {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+    color: #e467d4;
+  }
+
   /* The Infobox on the right */
   .infobox {
     float: right;
@@ -39,7 +60,7 @@
   .infobox-title {
     text-align: center;
     font-weight: bold;
-    background-color: #e467d4; /* Change this for different "vibes" */
+    background-color: #e467d4; 
     padding: 10px;
     margin-bottom: 5px;
   }
@@ -69,7 +90,6 @@
     padding: 5px;
   }
 
-  /* Main Content Styles */
   .content {
     line-height: 1.6;
   }
@@ -82,10 +102,18 @@
   }
 </style>
 </head>
+
 <body>
 
 <div class="wiki-container">
   <h1>Chloriini</h1>
+
+  <nav>
+    <a href="index.html">🏠 Home</a> | 
+    <a href="gd-stats.html">🟩 GD Achievements</a> | 
+    <a href="roblox-stats.html">🟥 Roblox Stats</a> |
+    <a href="fe2-stats.html">🌊 FE2 Maps</a>
+  </nav>
   
   <aside class="infobox">
     <div class="infobox-title">Chloriini</div>
@@ -94,38 +122,67 @@
     </div>
     <table class="infobox-table">
       <tr><th>Alias</th><td>Chloriini</td></tr>
-        <tr><th>Nicknames</th><td>Chloe, Chlor, Chlorine</td></tr>
+      <tr><th>Nicknames</th><td>Chloe, Chlor, Chlorine</td></tr>
       <tr><th>Born</th><td>August 25, 2010 (age 15)</td></tr>
-       <tr><th>Country</th><td>Thailand (resides in Finland)</td></tr>
-       <tr><th>Nationality</th><td>Thai</td></tr>
-       <tr><th>Games I play</th><td>Geometry Dash, Roblox, osu!, A Dance of Fire and Ice</td></tr>
+      <tr><th>Country</th><td>Thailand (resides in Finland)</td></tr>
+      <tr><th>Nationality</th><td>Thai</td></tr>
+      <tr><th>Games I play</th><td>Geometry Dash, Roblox, osu!, A Dance of Fire and Ice</td></tr>
     </table>
   </aside>
 
   <div class="content">
     <p>Hello there, welcome to my profile page!</p>
     
+    <p id="time-display" style="font-style: italic; color: #222; background: rgba(255,255,255,0.2); padding: 5px; border-radius: 4px;"></p>
+
     <div class="section-header">Interests</div>
     <p>I mostly have interests in stuff like history, geography, chemistry, and sometimes, astronomy. I only started trying scripting because of me trying to do so in Roblox Studio.</p>
     
     <div class="section-header">Personality</div>
- <p>I don't really talk to people as much, largely due to that I am mostly pretty shy and introverted, it's just how I mostly behave most of the time.</p>
+    <p>I don't really talk to people as much, largely due to that I am mostly pretty shy and introverted, it's just how I mostly behave most of the time.</p>
+    
     <div class="section-header">Favorite music artists</div>
     <p>My favorite artists were: xi (my favorite of all people), Camellia, TMM43, Dimrain47, DM DOKURO, LunarSimg, KORAII and ParagonX9 (yes I know I listen to ancient ahh musics)</p>
+    
     <div class="section-header">Links</div>
     <p>
-  <a href="https://twitter.com/Chloriini">Twitter</a> | 
-  <a href="https://github.com/meowchloechloriini">GitHub</a> | 
-  <a href="https://meowchloechloriini.github.io/my-profile/">Portfolio</a> |
-  <a href="https://www.roblox.com/users/1726601147/profile">Roblox account</a>
-</p>
+      <a href="https://twitter.com/Chloriini">Twitter</a> | 
+      <a href="https://github.com/meowchloechloriini">GitHub</a> | 
+      <a href="https://meowchloechloriini.github.io/my-profile/">Portfolio</a> |
+      <a href="https://www.roblox.com/users/1726601147/profile">Roblox account</a>
+    </p>
   </div>
       
-      <div style="clear: both; margin-top: 50px; padding: 15px; background: #f8f9fa; border: 1px dashed #a2a9b1; border-radius: 8px;">
-  <span style="font-weight: bold; display: block; margin-bottom: 10px;">Favorite Soundtracks:</span>
-  <audio controls src="Halcyon.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
-  <audio controls src="Its Going Down Now.mp3" style="width: 100%;"></audio>
-  <audio controls src="ParagonX9 - Chaoz Airflow.mp3" style="width: 100%"></audio>
+  <div style="clear: both; margin-top: 50px; padding: 15px; background: #f8f9fa; border: 1px dashed #a2a9b1; border-radius: 8px;">
+    <span style="font-weight: bold; display: block; margin-bottom: 10px;">Favorite Soundtracks:</span>
+    <audio controls src="Halcyon.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
+    <audio controls src="Its Going Down Now.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
+    <audio controls src="ParagonX9 - Chaoz Airflow.mp3" style="width: 100%"></audio>
+  </div>
 </div>
 
+<script>
+  function updateTime() {
+      // Helsinki Time (UTC+3)
+      const helsinkiTime = new Intl.DateTimeFormat('en-GB', {
+          timeStyle: 'short',
+          timeZone: 'Europe/Helsinki',
+      }).format(new Date());
+
+      // User's Local Time
+      const userTime = new Intl.DateTimeFormat('en-GB', {
+          timeStyle: 'short',
+      }).format(new Date());
+
+      const display = document.getElementById('time-display');
+      if (display) {
+          display.innerHTML = `It is currently <b>${helsinkiTime}</b> (UTC+3, Helsinki time) where I live, and it is <b>${userTime}</b> in your time.`;
+      }
+  }
+
+  updateTime();
+  setInterval(updateTime, 60000); 
+</script>
+
+</body>
 </html>
