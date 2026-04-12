@@ -1,10 +1,10 @@
 <head>
   <style>
 body {
-    background-color: #1a1a1a; /* Dark theme for GD */
+    background-color: #1a1a1a; 
     color: white;
     font-family: sans-serif;
-    display: flex;             /* This keeps the container centered */
+    display: flex;             
     justify-content: center;
     padding: 20px;
 }
@@ -12,144 +12,160 @@ body {
 .scroll-window {
     max-height: 600px;
     overflow-y: auto;
-    border: 2px solid #d505ff; /* GD Purple border */
+    border: 2px solid #d505ff; 
     border-radius: 8px;
     background: #1a1a1a;
     margin-top: 15px;
-}
+}  /* Closes .scroll-window */
 
-  .wiki-container {
+.wiki-container {
     background: rgba(234, 0, 255, 0.223);
-    width: 800px;
+    width: 95%;
+    max-width: 1000px;
     padding: 30px;
     border: 1px solid #a2a9b1;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  /* This makes the table fill the screen and centers it */
+}
+
 .infobox-table {
-    width: 100%;           /* Fills the container */
-    margin: 20px auto;     /* Centers it with some space at the top */
+    width: 100%;
+    margin: 20px auto;
     border-collapse: collapse;
-    background-color: #222; /* Darker background for the table rows */
+    background-color: #1a1a1a; 
 }
-
-/* This adds the lines between rows like the tower example */
-.infobox-table tr {
-    border-bottom: 1px solid #444;
-}
-
-/* This makes the labels (Placement, Level Name) look like headers */
+/* This makes the headers black and keeps the pink text */
 .infobox-table th {
     text-align: left;
     padding: 12px;
-    background-color: #333;
-    color: #e467d4; /* Pink text for the headers */
+    background-color: #000000; 
+    color: #e467d4; 
+    border: 1px solid #444;
 }
 
 .infobox-table td {
     padding: 12px;
-    text-align: center; /* Centers the stats like Attempts and Dates */
+    text-align: center; 
 }
 
-  h1 {
+h1 {
     border-bottom: 1px solid #a2a9b1;
     font-family: 'Linux Libertine', 'Georgia', serif;
     font-size: 2em;
     margin-top: 0;
-  }
+}
 
-  /* Navigation Bar Styling */
-  nav {
+nav {
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1); /* Slightly darker for readability */
     padding: 10px;
     border-radius: 5px;
-  }
+}
 
-  nav a {
+nav a {
     color: #e467d4;
     text-decoration: none;
     margin: 0 10px;
-  }
+}
 
-  nav a:hover {
+nav a:hover {
     text-decoration: underline;
-    color: #e467d4;
-  }
+}
   </style>
 </head>
-<div class="section-header" style="text-align: center; width: 100%;">GD Achievements</div>
-<div class="scroll-window: auto;">
-    <table style="width: 100%; border-collapse: collapse; color: white; text-align: center; font-family: 'Arial Black', sans-serif;">
-        <tr style="background: #fcf5f5;">
-            <th style="padding: 10px; border: 1px solid #444;">Placement</th>
-            <th style="padding: 10px; border: 1px solid #444;">Level Name</th>
-            <th style="padding: 10px; border: 1px solid #444;">Difficulty (Tier)</th>
-            <th style="padding: 10px; border: 1px solid #444;">Attempts</th>
-            <th style="padding: 10px; border: 1px solid #444;">Complete Date</th>
-        </tr>
-        <tr style="background: #8b0000;"> <td style="background: #00ffff; color: black;">#1</td>
-            <td>Acu</td>
-            <td>Extreme Demon (Beginner)</td>
-            <td>28878</td>
-            <td>2025/09/30</td>
-        </tr>
-        <tr style="background: #ff0000;"> <td style="background: #ffff00; color: black;">#2</td>
-            <td>Magma Bound</td>
-            <td>Insane Demon</td>
-            <td>2223</td>
-            <td>2026/04/05</td>
-        </tr>
-            <tr style="background: #da6464;"> <td style="background: #ff7300; color: black;">#3</td>
-            <td>white women</td>
-            <td>Hard Demon</td>
-            <td>215</td>
-            <td>2026/03/31</td>
-        </tr>
-        <tr style="background: #ff69b4;"> <td style="background: #a9a9a9;">#4</td>
-            <td>Chaoz Airflow</td>
-            <td>Medium Demon</td>
-            <td>3694</td>
-            <td>2026/04/02</td>
-        </tr>
-            <tr style="background: #ff69b4;"> <td style="background: #a9a9a9;">#5</td>
-            <td>Mountain King</td>
-            <td>Medium Demon</td>
-            <td>901</td>
-            <td>2024/04/15</td>
-        </tr>
-            <tr style="background: #ff69b4;"> <td style="background: #a9a9a9;">#6</td>
-            <td>VeritY</td>
-            <td>Medium Demon</td>
-            <td>1691</td>
-            <td>2023/12/14</td>
-        </tr>
-            </tr>
-            <tr style="background: #ff69b4;"> <td style="background: #a9a9a9;">#7</td>
-            <td>Extreme Park</td>
-            <td>Medium Demon</td>
-            <td>1070</td>
-            <td>2024/03/25</td>
-        </tr>
-            <tr style="background: #ff69b4;"> <td style="background: #a9a9a9;">#8</td>
-            <td>B</td>
-            <td>Medium Demon</td>
-            <td>1000+</td>
-            <td>2024</td>
-        </tr>
-            <tr style="background: #8800ff;"> <td style="background: #a9a9a9;">#9</td>
-            <td>DeCode</td>
-            <td>Easy Demon</td>
-            <td>1026</td>
-            <td>2024/11/16</td>
-        </tr>
-          <nav>
-    <a href="index.html">Home</a> | 
-    <a href="gd-stats.html">GD Achievements</a> | 
-    <a href="roblox-stats.html">EToH Achievements</a> |
-    <a href="fe2-stats.html">FE2 Achievements</a>
-  </nav>
-    </table>
-</div>
+
+<div class="wiki-container">
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="gd-stats.html">GD Achievements</a> | 
+        <a href="roblox-stats.html">EToH Achievements</a> |
+        <a href="fe2-stats.html">FE2 Achievements</a>
+    </nav>
+
+    <h1>GD Achievements</h1>
+
+    <div class="scroll-window">
+        <table class="infobox-table">
+            <thead>
+                <tr>
+                    <th>Placement</th>
+                    <th>Level Name</th>
+                    <th>Difficulty (Tier)</th>
+                    <th>Attempts</th>
+                    <th>Complete Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #00ffff; color: black; font-weight: bold;">#1</td>
+                    <td>Acu</td>
+                    <td>Extreme Demon (Beginner)</td>
+                    <td>28878</td>
+                    <td>2025/09/30</td>
+                </tr>
+                <tr>
+                    <td style="background: #ffff00; color: black; font-weight: bold;">#2</td>
+                    <td>Magma Bound</td>
+                    <td>Insane Demon</td>
+                    <td>2223</td>
+                    <td>2026/04/05</td>
+                </tr>
+                <tr>
+                    <td style="background: #ff7300; color: black; font-weight: bold;">#3</td>
+                    <td>white women</td>
+                    <td>Hard Demon</td>
+                    <td>215</td>
+                    <td>2026/03/31</td>
+                </tr>
+                <tr>
+                    <td style="background: #a9a9a9; color: black;">#4</td>
+                    <td>Chaoz Airflow</td>
+                    <td>Medium Demon</td>
+                    <td>3694</td>
+                    <td>2026/04/02</td>
+                    <tr>
+                    <td style="background: #a9a9a9; color: black;">#5</td>
+                    <td>Mountain King</td>
+                    <td>Medium Demon</td>
+                    <td>901</td>
+                    <td>2024/04/15</td>
+                </tr>
+                <tr>
+                    <td style="background: #a9a9a9; color: black;">#6</td>
+                    <td>VeritY</td>
+                    <td>Medium Demon</td>
+                    <td>1691</td>
+                    <td>2023/12/14</td>
+                </tr>
+                <tr>
+                    <td style="background: #a9a9a9; color: black;">#7</td>
+                    <td>Extreme Park</td>
+                    <td>Medium Demon</td>
+                    <td>1070</td>
+                    <td>2024/03/25</td>
+                </tr>
+                <tr>
+                    <td style="background: #a9a9a9; color: black;">#8</td>
+                    <td>B</td>
+                    <td>Medium Demon</td>
+                    <td>1000+</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td style="background: #a9a9a9; color: black;">#9</td>
+                    <td>DeCode</td>
+                    <td>Easy Demon</td>
+                    <td>1026</td>
+                    <td>2024/11/16</td>
+                </tr>
+               </tbody>
+      </table>
+    </div> <div style="margin-top: 20px; text-align: center; border-top: 1px solid #444; padding-top: 10px;">
+        <a href="index.html" style="color: #e467d4; text-decoration: none; margin: 0 10px;">Home</a> | 
+        <a href="gd-stats.html" style="color: #e467d4; text-decoration: none; margin: 0 10px;">GD Achievements</a> | 
+        <a href="roblox-stats.html" style="color: #e467d4; text-decoration: none; margin: 0 10px;">EToH Achievements</a> |
+        <a href="fe2-stats.html" style="color: #e467d4; text-decoration: none; margin: 0 10px;">FE2 Achievements</a>
+    </div>
+
+</div> ```
