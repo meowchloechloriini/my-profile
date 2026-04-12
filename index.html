@@ -49,51 +49,42 @@
     color: #e467d4;
   }
 
-  /* The Infobox on the right */
+ /* Line 53: The Infobox on the right */
   .infobox {
     float: right;
     width: 270px;
     border: 1px solid #a2a9b1;
-    background-color: #f8f9fa45;
+    background-color: #f8f9fa; /* Changed from #f8f9fa45 to be solid */
     margin-left: 20px;
     padding: 5px;
     font-size: 0.9em;
+    position: relative; /* Added to support z-index */
+    z-index: 10;        /* Pulls the box in front of background lines */
   }
 
-  .infobox-title {
-    text-align: center;
-    font-weight: bold;
-    background-color: #e467d4; 
-    padding: 10px;
-    margin-bottom: 5px;
-  }
-
-  .infobox-image {
-    text-align: center;
-    padding: 5px;
-  }
-
-  .infobox-image img {
-    max-width: 250px;
-    height: auto;
-  }
-
+  /* Line 81: The table inside the box */
   .infobox-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 5px;
+  }
+
+  /* ADD THIS: This creates the lines for each part */
+  .infobox-table tr {
+    border-bottom: 1px solid #a2a9b1;
   }
 
   .infobox-table th {
     text-align: left;
     width: 40%;
-    padding: 5px;
+    padding: 8px 5px;
   }
 
   .infobox-table td {
-    padding: 5px;
+    padding: 8px 5px;
+    text-align: right; /* Standard wiki alignment */
   }
-
-  .content {
+    .content {
     line-height: 1.6;
   }
 
@@ -112,7 +103,7 @@
   <h1>Chloriini</h1>
 
   <nav>
-    <a href="index.html">Home</a> | 
+    <a href="index.html">Home</a> | 3
     <a href="gd-stats.html">GD Achievements</a> | 
     <a href="roblox-stats.html">EToH Achievements</a> |
     <a href="fe2-stats.html">FE2 Achievements</a>
