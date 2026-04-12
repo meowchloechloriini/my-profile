@@ -120,17 +120,16 @@
   
   <aside class="infobox">
     <div class="infobox-title">Chloriini</div>
-    <div class="infobox-image">
-      <img src="Screenshot 2026-04-09 at 22.04.23.png" alt="Profile Picture">
+  <div class="infobox-image">
+    <div style="display: flex; cursor: pointer; background: #eee; border-bottom: 2px solid #e467d4;">
+        <div id="tab-anim" onclick="switchTab('animated')" style="flex: 1; padding: 5px; font-weight: bold; color: #e467d4; text-align: center;">GIF</div>
+        <div id="tab-stat" onclick="switchTab('static')" style="flex: 1; padding: 5px; font-weight: bold; color: #888; text-align: center;">Image</div>
     </div>
-    <table class="infobox-table">
-      <tr><th>Alias</th><td>Chloriini</td></tr>
-      <tr><th>Nicknames</th><td>Chloe, Chlor, Chlorine</td></tr>
-      <tr><th>Born</th><td>August 25, 2010 (age 15)</td></tr>
-      <tr><th>Country</th><td>Thailand (resides in Finland)</td></tr>
-      <tr><th>Nationality</th><td>Thai</td></tr>
-      <tr><th>Games I play</th><td>Geometry Dash, Roblox, osu!, A Dance of Fire and Ice</td></tr>
-    </table>
+
+    <div style="padding: 10px;">
+        <img id="profile-img" src="chloriini.gif" alt="Profile Picture" style="width: 100%; max-width: 250px; border-radius: 4px;">
+    </div>
+</div>
   </aside>
 
   <div class="content">
@@ -185,7 +184,23 @@
 
   updateTime();
   setInterval(updateTime, 60000); 
+  function switchTab(mode) {
+    const img = document.getElementById('profile-img');
+    const tabAnim = document.getElementById('tab-anim');
+    const tabStat = document.getElementById('tab-stat');
+
+    if (mode === 'animated') {
+        img.src = 'chloriini.gif'; 
+        tabAnim.style.color = '#e467d4';
+        tabStat.style.color = '#888';
+    } else {
+        img.src = 'Screenshot 2026-04-09 at 22.04.23.png';
+        tabStat.style.color = '#e467d4';
+        tabAnim.style.color = '#888';
+    }
+}
 </script>
+
 
 </body>
 </html>
