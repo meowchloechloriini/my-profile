@@ -25,6 +25,31 @@ body {
     border: 1px solid #a2a9b1;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
+  /* This makes the table fill the screen and centers it */
+.infobox-table {
+    width: 100%;           /* Fills the container */
+    margin: 20px auto;     /* Centers it with some space at the top */
+    border-collapse: collapse;
+    background-color: #222; /* Darker background for the table rows */
+}
+
+/* This adds the lines between rows like the tower example */
+.infobox-table tr {
+    border-bottom: 1px solid #444;
+}
+
+/* This makes the labels (Placement, Level Name) look like headers */
+.infobox-table th {
+    text-align: left;
+    padding: 12px;
+    background-color: #333;
+    color: #e467d4; /* Pink text for the headers */
+}
+
+.infobox-table td {
+    padding: 12px;
+    text-align: center; /* Centers the stats like Attempts and Dates */
+}
 
   h1 {
     border-bottom: 1px solid #a2a9b1;
