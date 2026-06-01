@@ -139,15 +139,6 @@
   <div class="content">
     <p>Hello there, welcome to my profile page!</p>
     
-    <div style="background: #1a1a1a; border: 1px solid #e467d4; padding: 15px; border-radius: 8px; max-width: 400px; margin: 20px 0; text-align: center;">
-        <p style="color: #e467d4; font-weight: bold; margin-top: 0; font-family: sans-serif;">🎵 Background Track Playing</p>
-        
-        <audio id="profile-audio" controls autoplay loop style="width: 100%; filter: invert(1) hue-rotate(180deg);">
-            <source src="Derpcat - Something Different (feat. Talurre).mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    
     <p id="time-display" style="font-style: italic; color: #222; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 4px; margin-right: 300px;"></p>
 
     <div class="section-header">Interests</div>
@@ -170,4 +161,66 @@
       
   <div style="clear: both; margin-top: 50px; padding: 15px; background: #f8f9fa; border: 1px dashed #a2a9b1; border-radius: 8px;">
     <span style="font-weight: bold; display: block; margin-bottom: 10px;">Favorite Soundtracks:</span>
-<audio controls src="Halcyon.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
+    <audio controls src="Halcyon.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
+  </div>
+
+  <div style="background: #1a1a1a; border: 1px solid #e467d4; padding: 15px; border-radius: 8px; max-width: 400px; margin: 30px auto 0 auto; text-align: center;">
+      <p style="color: #e467d4; font-weight: bold; margin-top: 0; font-family: sans-serif;">🎵 Background Track: Something Different</p>
+      
+      <audio id="profile-audio" controls autoplay loop style="width: 100%; border-radius: 4px; margin-top: 5px;">
+          <source src="something-different.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+  </div>
+
+</div>
+
+<script>
+  function updateTime() {
+      // Helsinki Time (UTC+3)
+      const helsinkiTime = new Intl.DateTimeFormat('en-GB', {
+          timeStyle: 'short',
+          timeZone: 'Europe/Helsinki',
+      }).format(new Date());
+
+      // User's Local Time
+      const userTime = new Intl.DateTimeFormat('en-GB', {
+          timeStyle: 'short',
+      }).format(new Date());
+
+      const display = document.getElementById('time-display');
+      if (display) {
+          display.innerHTML = `It is currently <b>${helsinkiTime}</b> where I live, and it is <b>${userTime}</b> in your time.`;
+      }
+  }
+
+  updateTime();
+  setInterval(updateTime, 60000); 
+  
+  function switchTab(mode) {
+    const img = document.getElementById('profile-img');
+    const tabAnim = document.getElementById('tab-anim');
+    const tabStat = document.getElementById('tab-stat');
+
+    if (mode === 'animated') {
+        img.src = 'chloriini.gif'; 
+        tabAnim.style.color = '#e467d4';
+        tabStat.style.color = '#888';
+    } else {
+        img.src = 'Screenshot 2026-04-09 at 22.04.23.png';
+        tabStat.style.color = '#e467d4';
+        tabAnim.style.color = '#888';
+    }
+  }
+
+  // Script to force try autoplay on load
+  window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('profile-audio');
+      audio.play().catch(error => {
+          console.log("Autoplay blocked by browser rules. Waiting for layout interaction.");
+      });
+  });
+</script>
+
+</body>
+</html>
