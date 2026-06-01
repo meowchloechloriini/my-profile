@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chloriini - Profile</title>
+  <title>nyraeliia - Profile</title>
 <style>
   
   body {
@@ -107,7 +107,7 @@
 <body>
 
 <div class="wiki-container">
-  <h1>Chloriini</h1>
+  <h1>nyraeliia</h1>
 
   <nav>
     <a href="index.html">Home</a> | 
@@ -117,7 +117,7 @@
   </nav>
   
   <aside class="infobox">
-    <div class="infobox-title">Chloriini</div>
+    <div class="infobox-title">nyraeliia</div>
   <div class="infobox-image">
     <div style="display: flex; cursor: pointer; background: #eee; border-bottom: 2px solid #e467d4;">
         <div id="tab-anim" onclick="switchTab('animated')" style="flex: 1; padding: 5px; font-weight: bold; color: #e467d4; text-align: center;">GIF</div>
@@ -127,8 +127,7 @@
 <div style="padding: 10px;">
     <img id="profile-img" src="chloriini.gif" alt="Profile Picture" style="width: 100%; max-width: 250px; border-radius: 4px;">
 </div> <table class="infobox-table">
-    <tr><th>Alias</th><td>Chloriini</td></tr>
-    <tr><th>Nicknames</th><td>Chloe, Chlor, Chlorine</td></tr>
+    <tr><th>Nicknames</th><td>Chloe, Nyra, Noelle</td></tr>
     <tr><th>Born</th><td>August 25, 2010 (age 15)</td></tr>
     <tr><th>Country</th><td>Thailand (resides in Finland)</td></tr>
     <tr><th>Nationality</th><td>Thai</td></tr>
@@ -140,6 +139,15 @@
   <div class="content">
     <p>Hello there, welcome to my profile page!</p>
     
+    <div style="background: #1a1a1a; border: 1px solid #e467d4; padding: 15px; border-radius: 8px; max-width: 400px; margin: 20px 0; text-align: center;">
+        <p style="color: #e467d4; font-weight: bold; margin-top: 0; font-family: sans-serif;">🎵 Background Track Playing</p>
+        
+        <audio id="profile-audio" controls autoplay loop style="width: 100%; filter: invert(1) hue-rotate(180deg);">
+            <source src="Derpcat - Something Different (feat. Talurre).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
     <p id="time-display" style="font-style: italic; color: #222; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 4px; margin-right: 300px;"></p>
 
     <div class="section-header">Interests</div>
@@ -149,11 +157,11 @@
     <p>I don't really talk to people as much, largely due to that I am mostly pretty shy and introverted, it's just how I mostly behave most of the time.</p>
     
     <div class="section-header">Favorite music artists</div>
-    <p>My favorite artists were: xi (my favorite of all people), Camellia, TMM43, Dimrain47, DM DOKURO, LunarSimg, KORAII and ParagonX9 (yes I know I listen to ancient ahh musics)</p>
+    <p>My favorite artists were: xi (my favorite of all people), Camellia, TMM43, Dimrain47, DM DOKURO, LunarSimg, KORAII (TOMBOY) and ParagonX9 (yes I know I listen to ancient ahh musics)</p>
     
     <div class="section-header">Links</div>
     <p>
-      <a href="https://twitter.com/Chloriini">Twitter</a> | 
+      <a href="https://twitter.com/nyraeliia">Twitter</a> | 
       <a href="https://github.com/meowchloechloriini">GitHub</a> | 
       <a href="https://meowchloechloriini.github.io/my-profile/">Placeholder</a> |
       <a href="https://www.roblox.com/users/1726601147/profile">Roblox account</a>
@@ -162,50 +170,4 @@
       
   <div style="clear: both; margin-top: 50px; padding: 15px; background: #f8f9fa; border: 1px dashed #a2a9b1; border-radius: 8px;">
     <span style="font-weight: bold; display: block; margin-bottom: 10px;">Favorite Soundtracks:</span>
-    <audio controls src="Halcyon.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
-    <audio controls src="Its Going Down Now.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
-    <audio controls src="ParagonX9 - Chaoz Airflow.mp3" style="width: 100%"></audio>
-  </div>
-</div>
-
-<script>
-  function updateTime() {
-      // Helsinki Time (UTC+3)
-      const helsinkiTime = new Intl.DateTimeFormat('en-GB', {
-          timeStyle: 'short',
-          timeZone: 'Europe/Helsinki',
-      }).format(new Date());
-
-      // User's Local Time
-      const userTime = new Intl.DateTimeFormat('en-GB', {
-          timeStyle: 'short',
-      }).format(new Date());
-
-      const display = document.getElementById('time-display');
-      if (display) {
-          display.innerHTML = `It is currently <b>${helsinkiTime}</b> where I live, and it is <b>${userTime}</b> in your time.`;
-      }
-  }
-
-  updateTime();
-  setInterval(updateTime, 60000); 
-  function switchTab(mode) {
-    const img = document.getElementById('profile-img');
-    const tabAnim = document.getElementById('tab-anim');
-    const tabStat = document.getElementById('tab-stat');
-
-    if (mode === 'animated') {
-        img.src = 'chloriini.gif'; 
-        tabAnim.style.color = '#e467d4';
-        tabStat.style.color = '#888';
-    } else {
-        img.src = 'Screenshot 2026-04-09 at 22.04.23.png';
-        tabStat.style.color = '#e467d4';
-        tabAnim.style.color = '#888';
-    }
-}
-</script>
-
-
-</body>
-</html>
+<audio controls src="Halcyon.mp3" style="width: 100%; margin-bottom: 10px;"></audio>
